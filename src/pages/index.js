@@ -1,23 +1,16 @@
-import { supabase } from './../lib/supabaseClient';
+import { supabase } from './../lib/supabaseClient'
+import Head from "next/head"
+import Link from 'next/link'
+import styles from '../styles/Start.module.scss'
 
-function Home({ countries }) {
+export default function Start() {
   return (
-    <ul>
-      {countries.map((country) => (
-        <li key={country.id}>{country.name}</li>
-      ))}
-    </ul>
+    <div >
+      <h1 className={styles.header}> Save the planet step-by-step </h1>
+      <p>Take small concrete steps to help combat climate change!</p>
+      <Link className='start' href="/login">
+        <button type="start">Start</button>
+      </Link>
+    </div>
   );
 }
-
-export async function getServerSideProps() {
-  let { data } = await supabase.from('countries').select()
-
-  return {
-    props: {
-     countries: data
-    },
-  }
-}
-
-export default Home;

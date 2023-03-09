@@ -1,0 +1,47 @@
+.test{
+  color: red;
+}
+
+// hearder
+.header {
+position: absolute;
+width: 323px;
+height: 88px;
+left: 35px;
+top: 161px;
+
+font-family: 'Comfortaa';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 130%;
+/* or 52px */
+
+letter-spacing: -0.022em;
+
+color: #000000;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+//text below
+.p {
+position: absolute;
+width: 301px;
+height: 80px;
+left: 35px;
+top: 269px;
+
+font-family: 'Comfortaa';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 150%;
+/* or 30px */
+
+letter-spacing: -0.022em;
+
+color: #000000;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
