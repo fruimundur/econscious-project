@@ -9,7 +9,7 @@ export default function Start() {
       <h1 className={styles.header}> Save the planet step-by-step </h1>
       <p className={styles.slogan}>Take small concrete steps to help combat climate change!</p>
       <Link className='start' href="/login">
-        <button type="start">Start</button>
+        <button className={styles.startButton} type="start">Start</button>
       </Link>
     </div>
   );
