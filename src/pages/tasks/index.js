@@ -11,38 +11,49 @@ export async function getServerSideProps() {
 
   return {
     props: {
-     tasks: data
+      tasks: data
     },
   }
 }
 
-const MyComponent = ({tasks}) => {
+const MyComponent = ({ tasks }) => {
+  const [currentTaskId, setCurrentTaskId] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
- 
-  const handleOpenPopup = () => {
-    setIsPopupOpen(true);
+
+  const handleOpenPopup = (taskId) => {
+    setCurrentTaskId(taskId);
   };
- 
+
   const handleClosePopup = () => {
-    setIsPopupOpen(false);
+    setCurrentTaskId(null);
   };
- 
+
   return (
     <div>
-      <h1 className={styles.header}>Pick a task</h1>
-      {console.log(tasks)}
-      {tasks.map((task) => (
-      <div key={task.id}>
-        <button  className={styles.taskBtn} onClick={handleOpenPopup}>{task.taskname}</button>
-        <Popup isOpen={isPopupOpen} onClose={handleClosePopup}>
-          <p className={styles.text}>Text about your task is displayed here</p>
-        </Popup>
+      <div>
+        <button className="button block" onClick={() => supabase.auth.signOut()}>
+          Sign Out
+        </button>
       </div>
-       ))}
+      <h1 className={styles.header}>Pick a task</h1>
+      {/* {console.log(tasks)} */}
+      {tasks.map((task) => (
+        <div key={task.id}>
+          <button className={styles.taskBtn} onClick={() => handleOpenPopup(task.id)}>{task.taskname}</button>
+          <Popup isOpen={currentTaskId === task.id} onClose={handleClosePopup}>
+            <h3>Why this makes a difference</h3>
+            <p className={styles.text}>{task.description}</p>
+            <h3>How to complete task</h3>
+            <p className={styles.text}>{task.howto}</p>
+            <h3>Share your achievement</h3>
+            <p className={styles.text}>Something about sharing and mention of the photo option</p>
+          </Popup>
+        </div>
+      ))}
     </div>
   );
 };
- 
+
 export default MyComponent;
 
 

@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
  
 .popupInner {
@@ -45,7 +46,7 @@
 }
 
 .taskBtn {
-  position: absolute;
+  position: relative;
   width: 324px;
   height: 48px;
   left: 35px;
