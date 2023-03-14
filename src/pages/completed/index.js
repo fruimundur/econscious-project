@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import styles from '../../styles/Completed.module.scss'
+import styles from '../../styles/completed.module.scss'
 import Image from 'next/image'
 import placeholder from '../../../public/placeholder.jpg';
 import { FacebookMessengerShareButton, FacebookMessengerIcon } from 'next-share';

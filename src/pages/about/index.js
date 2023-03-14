@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import styles from '../../styles/About.module.scss'
+import styles from '../../styles/about.module.scss'
 
 
 export default function Login() {

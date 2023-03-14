@@ -1,7 +1,7 @@
 import { supabase } from './../lib/supabaseClient'
 import Head from "next/head"
 import Link from 'next/link'
-import styles from '../styles/Start.module.scss'
+import styles from '../styles/start.module.scss'
 
 export default function Start() {
   return (
