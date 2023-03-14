@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import styles from '../../styles/about.module.scss'
 
 
-export default function Login() {
+export default function About() {
 const router = useRouter();
 
   return (

@@ -17,7 +17,7 @@ export async function getServerSideProps() {
   }
 }
 
-const MyComponent = ({ tasks }) => {
+const Tasks = ({ tasks }) => {
   const [currentTaskId, setCurrentTaskId] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const user = useUser()
@@ -57,7 +57,7 @@ const MyComponent = ({ tasks }) => {
   );
 };
 
-export default MyComponent;
+export default Tasks;
 
 
 
