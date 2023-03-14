@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
-import MyComponent from '../tasks'
+import Tasks from '../tasks'
 
 export default function Account({ session }) {
   const supabase = useSupabaseClient()

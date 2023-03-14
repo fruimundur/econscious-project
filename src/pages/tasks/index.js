@@ -6,18 +6,17 @@ import Popup from '../modals';
 import { supabase } from '../../lib/supabaseClient';
 
 
+export async function getServerSideProps() {
+  let { data } = await supabase.from('tasks').select()
 
-const MyComponent = ({ tasks }) => {
-  async function getServerSideProps() {
-    let { data } = await supabase.from('tasks').select()
-  
-    return {
-      props: {
-        tasks: data
-      },
-    }
+  return {
+    props: {
+      tasks: data
+    },
   }
+}
 
+const Tasks = ({ tasks }) => {
   const [currentTaskId, setCurrentTaskId] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -55,7 +54,7 @@ const MyComponent = ({ tasks }) => {
   );
 };
 
-export default MyComponent;
+export default Tasks;
 
 
 
