@@ -4,22 +4,24 @@ import styles from '../../styles/tasks.module.scss'
 import React, { useState } from 'react';
 import Popup from '../modals';
 import { supabase } from '../../lib/supabaseClient';
+import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
 
 
+export async function getServerSideProps() {
+  let { data } = await supabase.from('tasks').select()
+
+  return {
+    props: {
+      tasks: data
+    },
+  }
+}
 
 const MyComponent = ({ tasks }) => {
-  async function getServerSideProps() {
-    let { data } = await supabase.from('tasks').select()
-  
-    return {
-      props: {
-        tasks: data
-      },
-    }
-  }
-
   const [currentTaskId, setCurrentTaskId] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const user = useUser()
+  console.log(user);
 
   const handleOpenPopup = (taskId) => {
     setCurrentTaskId(taskId);
