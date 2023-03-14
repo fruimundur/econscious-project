@@ -1,9 +1,22 @@
 import { Auth } from '@supabase/auth-ui-react'
 import { ThemeSupa } from '@supabase/auth-ui-shared'
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
-import Account from '../components/Account'
+//import Account from '../components/Account'
+import MyComponent from '../tasks/index'
+import { supabase } from '../../lib/supabaseClient';
 
-const Home = () => {
+
+export async function getServerSideProps() {
+  let { data } = await supabase.from('tasks').select()
+
+  return {
+    props: {
+      tasks: data
+    },
+  }
+}
+
+const Home = ({tasks}) => {
   const session = useSession()
   const supabase = useSupabaseClient()
 
@@ -12,7 +25,8 @@ const Home = () => {
       {!session ? (
         <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} theme="dark" />
       ) : (
-        <Account session={session} />
+        <MyComponent tasks={tasks} />
+        //<Account session={session} />
       )}
     </div>
   )
