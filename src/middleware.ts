@@ -13,7 +13,7 @@ export async function middleware(req: NextRequest) {
   } = await supabase.auth.getSession()
 
   // Check auth condition
-  if (session?.user.email?.endsWith('@gmail.com')) {
+  if (session?.user.email) {
     // Authentication successful, forward request to protected route.
     return res
   }
@@ -26,5 +26,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: '/middleware-protected/:path*',
+  matcher: ['/about/:path*', '/tasks/:path*', '/completed/:path*']
 }
