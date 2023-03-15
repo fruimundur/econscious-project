@@ -71,8 +71,8 @@ const Tasks = ({ tasks }) => {
             <p className={styles.text}>{task.howto}</p>
             <h3>Share your achievement</h3>
             <p className={styles.text}>Something about sharing and mention of the photo option</p>
-            <button className={styles.closeBtn} onClick={handleClosePopup}>Back</button>
-            <button className={styles.closeBtn} onClick={handleCompleteTask}>Completed Task</button>
+            <button className={styles.backBtn} onClick={handleClosePopup}>Back</button>
+            <button className={styles.completedBtn} onClick={handleCompleteTask}>Completed Task</button>
           </Popup>
         </div>
       ))}

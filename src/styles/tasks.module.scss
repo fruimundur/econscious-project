@@ -36,12 +36,8 @@
   font-weight: 500;
   font-size: 40px;
   line-height: 150%;
-  /* identical to box height, or 60px */
-
   letter-spacing: -0.022em;
-
   color: #005668;
-
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -49,15 +45,18 @@
   position: relative;
   width: 324px;
   height: 48px;
-  left: 35px;
-  top: 170px;
+  left: 38px;
+  top: 167px; 
+  background: #FFFFFF;
+  border: 3px solid #3FBE8B;
+  border-radius: 5px;
+  margin-top: 16px;
 
   font-family: 'Comfortaa';
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 150%;
-  /* or 36px */
 
   text-align: center;
   letter-spacing: -0.022em;
