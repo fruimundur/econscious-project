@@ -37,11 +37,19 @@ const Tasks = ({ tasks }) => {
 
   const handleClosePopup = () => {
     setCurrentTaskId(null);
-    Popup.isOpen=false;
+    Popup.isOpen = false;
+  };
+
+  const handleOuterClose = () => {
+    if (Popup.isOpen = false) {
+      setCurrentTaskId(null);
+      Popup.isOpen = false;
+    }
+
   };
 
   const handleCompleteTask = () => {
-    Popup.isOpen=false;
+    Popup.isOpen = false;
   };
 
   return (
