@@ -18,10 +18,18 @@ export async function getServerSideProps() {
 }
 
 const Tasks = ({ tasks }) => {
+  const supabaseClient = useSupabaseClient()
+  const user = useUser()
   const [currentTaskId, setCurrentTaskId] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const user = useUser()
   console.log(user);
+
+  const router = useRouter();
+
+  const handleSignOut = async () => {
+    await supabaseClient.auth.signOut();
+    router.push('/');
+  };
 
   const handleOpenPopup = (taskId) => {
     setCurrentTaskId(taskId);
@@ -34,7 +42,7 @@ const Tasks = ({ tasks }) => {
   return (
     <div>
       <div>
-        <button className="button block" onClick={() => supabase.auth.signOut()}>
+        <button className="button block" onClick={handleSignOut}>
           Sign Out
         </button>
       </div>
