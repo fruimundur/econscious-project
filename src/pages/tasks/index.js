@@ -37,6 +37,11 @@ const Tasks = ({ tasks }) => {
 
   const handleClosePopup = () => {
     setCurrentTaskId(null);
+    Popup.isOpen=false;
+  };
+
+  const handleCompleteTask = () => {
+    Popup.isOpen=false;
   };
 
   return (
@@ -58,6 +63,8 @@ const Tasks = ({ tasks }) => {
             <p className={styles.text}>{task.howto}</p>
             <h3>Share your achievement</h3>
             <p className={styles.text}>Something about sharing and mention of the photo option</p>
+            <button className={styles.closeBtn} onClick={handleClosePopup}>Back</button>
+            <button className={styles.closeBtn} onClick={handleCompleteTask}>Completed Task</button>
           </Popup>
         </div>
       ))}
