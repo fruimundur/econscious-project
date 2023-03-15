@@ -1,5 +1,12 @@
-@media only screen 
-and (min-device-width: 393px) 
-and (max-device-width: 834px) {
+@media only screen and (max-width: 393px) {
+    .logo {
+        max-width: 40%;
+        height: auto;
+        margin-left: 30px;
+        margin-top: 30px;
+      }
+}
+
+@media only screen and (min-width: 834px) {
 
 }
