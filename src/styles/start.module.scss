@@ -4,6 +4,9 @@
   width: 425px;
   margin: 0 auto;
   padding: 20px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 2rem;
 }
 
 
@@ -81,6 +84,7 @@ margin-top: 10px;
   bottom:0px;
   left: 50%;
   transform: translateX(-50%);
-  height: 45vh;
+  height: 55vh;
   width: auto;
+  z-index: -1;
 }
