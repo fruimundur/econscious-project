@@ -180,6 +180,29 @@
   color: #005668;
 }
 
+.completedTask {
+  width: 361px;
+  height: 48px;
+  left: 38px;
+  top: 167px; 
+  background: #FFFFFF;
+  background-color: #79E79A;
+  border: 3px solid #3FBE8B;
+  border-radius: 5px;
+  margin-top: 16px;
+
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+
+  text-align: center;
+  letter-spacing: -0.022em;
+
+  color: #005668;
+}
+
 // .taskcontainer{
 //   text-align: center;
 // }

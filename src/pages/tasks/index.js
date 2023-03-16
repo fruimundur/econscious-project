@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from '../../styles/tasks.module.scss'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Popup from '../modals';
 import { supabase } from '../../lib/supabaseClient';
 import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
@@ -23,6 +23,7 @@ const Tasks = ({ tasks }) => {
   const supabaseClient = useSupabaseClient()
   const user = useUser()
   const [currentTaskId, setCurrentTaskId] = useState(null);
+  const [completedTasks, setCompletedTasks] = useState([]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   console.log(user);
 
@@ -50,27 +51,73 @@ const Tasks = ({ tasks }) => {
 
   };
 
-  const handleCompleteTask = () => {
-    Popup.isOpen = false;
+  const handleCompleteTask = async () => {
+    // Check if the user is logged in
+    if (user) {
+      try {
+        const { data, error } = await supabase.from('usertasks').insert([
+          {
+            user_id: user.id,
+            task_id: currentTaskId,
+            completed: true,
+            comment: '', // Add any comment if required
+            photo: '', // Add photo URL if required
+          },
+        ]);
+
+        if (error) {
+          console.error('Error completing task:', error);
+        } else {
+          console.log('Task completed successfully:', data);
+          setCompletedTasks([...completedTasks, currentTaskId]);
+          handleClosePopup();
+        }
+      } catch (error) {
+        console.error('Error completing task:', error);
+      }
+    } else {
+      console.error('User not logged in');
+    }
   };
+
+  const fetchCompletedTasks = async () => {
+    if (!user) return;
+
+    const { data, error } = await supabase
+      .from('usertasks')
+      .select('task_id')
+      .eq('user_id', user.id)
+      .eq('completed', true);
+
+    if (error) {
+      console.error('Error fetching completed tasks:', error);
+    } else {
+      const taskIds = data.map(task => task.task_id);
+      setCompletedTasks(taskIds);
+    }
+  };
+
+  useEffect(() => {
+    fetchCompletedTasks();
+  }, [user]);
 
   return (
     <div className={styles.container}>
       <div className={styles.navBar}>
         <Image
-            className={styles.logo}
-            src={logo}
-            alt="Brand logo"
-          />
-          <button className={styles.signOutBtn} onClick={handleSignOut}>
-            Sign Out
-          </button>
+          className={styles.logo}
+          src={logo}
+          alt="Brand logo"
+        />
+        <button className={styles.signOutBtn} onClick={handleSignOut}>
+          Sign Out
+        </button>
       </div>
       <h1 className={styles.header}>Pick a task</h1>
       {/* {console.log(tasks)} */}
       {tasks.map((task) => (
         <div className={styles.taskcontainer} key={task.id}>
-          <button className={styles.taskBtn} onClick={() => handleOpenPopup(task.id)}>{task.taskname}</button>
+          <button className={`${styles.taskBtn} ${completedTasks.includes(task.id) ? styles.completedTask : ''}`}onClick={() => handleOpenPopup(task.id)}>{task.taskname}</button>
           <Popup isOpen={currentTaskId === task.id} onClose={handleClosePopup}>
             <h1 className={styles.name}>{task.taskname}</h1>
             <h2 className={styles.type}>{task.type}</h2>
