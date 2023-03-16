@@ -29,21 +29,21 @@
  
 .popupInner {
   width: 250px;
-  height: 592px;
+  height: 610px;
   left: 35px;
   top: 160px;
   background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
   border-radius: 20px;
   padding-left: 2rem;
   padding-right: 2rem;
+  overflow: scroll;
 }
 
-@media only screen and (max-width: 425px) {
   .logo {
     max-width: 50%;
     height: auto;
   }
-}
+
 
 .signOutBtn {
   width: 92px;
@@ -65,8 +65,32 @@
   align-items: center;
   letter-spacing: -0.022em;
   color: #005668;
-  padding-left: 1rem;
   padding-right: 1rem;
+  margin-bottom: 0;
+}
+
+.name {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.022em;
+  color: #005668;
+  margin-bottom: 0px;
+}
+
+.type {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.022em;
+  text-align: center;
+  color: #005668;
+  margin-top: 0px;
+  margin-bottom: 30px;
 }
 
 .text {
@@ -81,6 +105,7 @@
   color: #005668;
   border-bottom: 2px solid #3FBE8B;
   padding-bottom: 1rem;
+  margin-top: 10px;
 }
 
 .btnStyle{
@@ -134,7 +159,7 @@
 }
 
 .taskBtn {
-  width: 324px;
+  width: 361px;
   height: 48px;
   left: 38px;
   top: 167px; 
@@ -155,6 +180,6 @@
   color: #005668;
 }
 
-.taskcontainer{
-  text-align: center;
-}
+// .taskcontainer{
+//   text-align: center;
+// }

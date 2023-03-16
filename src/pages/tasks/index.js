@@ -72,6 +72,8 @@ const Tasks = ({ tasks }) => {
         <div className={styles.taskcontainer} key={task.id}>
           <button className={styles.taskBtn} onClick={() => handleOpenPopup(task.id)}>{task.taskname}</button>
           <Popup isOpen={currentTaskId === task.id} onClose={handleClosePopup}>
+            <h1 className={styles.name}>{task.taskname}</h1>
+            <h2 className={styles.type}>{task.type}</h2>
             <h3 className={styles.title}>Why this makes a difference</h3>
             <p className={styles.text}>{task.description}</p>
             <h3 className={styles.title}>How to complete task</h3>
