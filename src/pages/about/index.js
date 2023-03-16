@@ -32,7 +32,7 @@ const router = useRouter();
         After you have completed a task you have the option of sharing your achievement on social media so you can encourage other people to do the same.
         </p>
         <div className={styles.buttonStyle}>
-          <Link className='start' href="/login">
+          <Link className='start' href="/tasks">
             <button className={styles.gotItBtn} type="start">Got it</button>
           </Link> 
         </div>   
