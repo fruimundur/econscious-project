@@ -22,8 +22,15 @@ export async function getServerSideProps(context) {
 export default function Completed({ task }) {
   const router = useRouter();
 
+  const handleBack = async () => {
+    router.push('/tasks');
+  };
+
   return (
     <>
+      <button className={styles.signOutBtn} onClick={handleBack}>
+        Back
+      </button>
       <Image
         className={styles.img}
         src={thankyou}
