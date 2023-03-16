@@ -34,6 +34,7 @@ export default function Completed({ task }) {
         <p className={styles.paragraph}>{task.description}</p>
         <a className={styles.link} href="https://www.google.com/" target="_blank">Read more</a>
       </div>
+      <button className={styles.photoButton}>Add photo</button>
       <p className={styles.shareText}>Share your accomplishment</p>
       <div className={styles.buttonContainer}>
         <FacebookShareButton
