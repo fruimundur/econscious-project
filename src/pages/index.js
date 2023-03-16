@@ -20,11 +20,13 @@ export default function Start() {
       <Link className='start' href="/login">
         <button className={styles.startButton} type="start">Start</button>
       </Link>
+      <div className={styles.imgContainer}>
       <Image
           className={styles.img}
           src={tree}
           alt="Green tree"
         />
+      </div>
       </div>
     </div>
   );
