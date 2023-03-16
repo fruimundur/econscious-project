@@ -124,9 +124,9 @@ export default function Completed({ task }) {
         Back
       </button>
       {uploadedImageUrl ? (
-        <Image className={styles.uploadedImage} src={uploadedImageUrl} alt="Uploaded image" width={600} height={400}/>
+        <Image className={styles.uploadedImage} src={uploadedImageUrl} alt="Uploaded image" width={600} height={400} />
       ) : (
-        <Image className={styles.img} src={thankyou} alt="Placeholder image" width={600} height={400}/>
+        <Image className={styles.img} src={thankyou} alt="Placeholder image" width={600} height={400} />
       )}
       <h1 className={styles.header}>Task completed!</h1>
       <div className={styles.paragraphBox}>
@@ -134,7 +134,7 @@ export default function Completed({ task }) {
         <a className={styles.link} href="https://www.google.com/" target="_blank">Read more</a>
       </div>
       <div {...getRootProps()} className={styles.photoButton}>
-        <input {...getInputProps()} />
+        <input {...getInputProps()} capture="environment" />
         {<p>Add photo</p>}
       </div>
       <p className={styles.shareText}>Share your accomplishment</p>
