@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import Popup from '../modals';
 import { supabase } from '../../lib/supabaseClient';
 import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
+import logo from '../../../public/logo.png';
+import Image from 'next/image';
 
 
 export async function getServerSideProps() {
@@ -53,26 +55,33 @@ const Tasks = ({ tasks }) => {
   };
 
   return (
-    <div>
-      <div>
-        <button className="button block" onClick={handleSignOut}>
-          Sign Out
-        </button>
+    <div className={styles.container}>
+      <div className={styles.navBar}>
+        <Image
+            className={styles.logo}
+            src={logo}
+            alt="Brand logo"
+          />
+          <button className={styles.signOutBtn} onClick={handleSignOut}>
+            Sign Out
+          </button>
       </div>
       <h1 className={styles.header}>Pick a task</h1>
       {/* {console.log(tasks)} */}
       {tasks.map((task) => (
-        <div key={task.id}>
+        <div className={styles.taskcontainer} key={task.id}>
           <button className={styles.taskBtn} onClick={() => handleOpenPopup(task.id)}>{task.taskname}</button>
           <Popup isOpen={currentTaskId === task.id} onClose={handleClosePopup}>
-            <h3>Why this makes a difference</h3>
+            <h3 className={styles.title}>Why this makes a difference</h3>
             <p className={styles.text}>{task.description}</p>
-            <h3>How to complete task</h3>
+            <h3 className={styles.title}>How to complete task</h3>
             <p className={styles.text}>{task.howto}</p>
-            <h3>Share your achievement</h3>
+            <h3 className={styles.title}>Share your achievement</h3>
             <p className={styles.text}>Something about sharing and mention of the photo option</p>
-            <button className={styles.backBtn} onClick={handleClosePopup}>Back</button>
-            <button className={styles.completedBtn} onClick={handleCompleteTask}>Completed Task</button>
+            <div className={styles.btnStyle}>
+              <button className={styles.backBtn} onClick={handleClosePopup}>Back</button>
+              <button className={styles.completedBtn} onClick={handleCompleteTask}>Complete Task</button>
+            </div>
           </Popup>
         </div>
       ))}
