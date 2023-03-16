@@ -21,7 +21,7 @@ export default function Account({ session }) {
       let { data, error, status } = await supabase
         .from('users')
         .select(`username, website, avatar_url`)
-        .eq('id', user.id)
+        .eq('id', user?.id)
         .single()
 
       if (error && status !== 406) {
@@ -68,7 +68,7 @@ export default function Account({ session }) {
     <div className="form-widget">
       <div>
         <label htmlFor="email">Email</label>
-        <input id="email" type="text" value={session.user.email} disabled />
+        <input id="email" type="text" value={session?.user?.email} disabled />
       </div>
       <div>
         <label htmlFor="username">Username</label>
