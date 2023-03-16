@@ -1,3 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    padding-right: 2em;
+    padding-left: 2rem;
+    padding-top: 2rem;
+  }
+
 .img {
     height: 50vh;
     width: 390px;
@@ -71,6 +82,24 @@
     border: 3px solid #3FBE8B;
     border-radius: 33px;
 }
+
+.signOutBtn {
+    width: 92px;
+    height: 32px;
+    left: 312px;
+    top: 48px;
+    background: #79E79A;
+    border:none;
+    border-radius: 6px;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.022em;
+    color: #005668;
+    margin: 1%;
+  }
 
 // width: 200px;
 // height: 82px;
