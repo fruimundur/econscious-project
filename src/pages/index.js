@@ -25,7 +25,7 @@ export default function Start() {
           src={tree}
           alt="Green tree"
         />
-        </div>
+      </div>
     </div>
   );
 }
