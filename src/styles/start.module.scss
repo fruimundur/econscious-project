@@ -1,5 +1,3 @@
-@media only screen and (max-width: 425px) {
-
 .container {
   display: flex;
   flex-direction: column;
@@ -9,12 +7,10 @@
 }
 
 
-
-@media only screen and (max-width: 425px) {
-  .logo {
+.logo {
     max-width: 50%;
     height: auto;
-  }
+}
 
 // header
 .header {
@@ -33,6 +29,8 @@ line-height: 130%;
 letter-spacing: -0.022em;
 
 color: #005668;
+
+margin-top: 90px;
 
 }
 
@@ -53,7 +51,7 @@ line-height: 150%;
 letter-spacing: -0.022em;
 
 color: #005668;
-margin-top: 30px;
+margin-top: 10px;
 }
 
 .startButton {
@@ -83,91 +81,6 @@ margin-top: 30px;
   bottom:0px;
   left: 50%;
   transform: translateX(-50%);
-  height: 50vh;
+  height: 45vh;
   width: auto;
-}
-
-}
-
-
-@media only screen and (min-width: 390px) {
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    width: 390px;
-    margin: 0 auto;
-  }
-  
-  
-  // header
-  .header {
-  width: 323px;
-  height: 88px;
-  left: 35px;
-  top: 161px;
-  
-  font-family: 'Comfortaa';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 130%;
-  /* or 52px */
-  
-  letter-spacing: -0.022em;
-  
-  color: #005668;
-  
-  }
-  
-  //text below
-  .slogan {
-  width: 301px;
-  height: 80px;
-  left: 35px;
-  top: 269px;
-  
-  font-family: 'Comfortaa';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 150%;
-  /* or 30px */
-  
-  letter-spacing: -0.022em;
-  
-  color: #005668;
-  margin-top: 30px;
-  }
-  
-  .startButton {
-    width: 200px;
-    height: 82px;
-    left: 35px;
-    top: 385px;
-  
-    font-family: 'Comfortaa';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 150%;
-    /* or 54px */
-  
-    letter-spacing: -0.022em;
-  
-    color: #005668;
-  
-    background: #79E79A;
-    border: 3px solid #3FBE8B;
-    border-radius: 33px;
-  }
-  
-  .img {
-    display: flex;
-    bottom:0px;
-    height: 50vh;
-    width: auto;
-  }  
-
-}
 }
