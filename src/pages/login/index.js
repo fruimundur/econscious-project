@@ -5,6 +5,7 @@ import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
 import Tasks from '../tasks/index'
 import { supabase } from '../../lib/supabaseClient';
 import styles from '../../styles/login.module.scss'
+import About from '../about';
 
 
 export async function getServerSideProps() {
@@ -26,7 +27,8 @@ const Login = ({tasks}) => {
       {!session ? (
         <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} theme="dark" />
       ) : (
-        <Tasks tasks={tasks} />
+        // <Tasks tasks={tasks} />
+        <About/>
         //<Account session={session} />
       )}
     </div>
