@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import styles from '../../styles/completed.module.scss'
 import Image from 'next/image'
-import placeholder from '../../../public/placeholder.jpg';
+import thankyou from '../../../public/thankyou.png';
 import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon } from 'next-share';
 import nextConnect from 'next-connect';
 
@@ -13,23 +13,23 @@ const router = useRouter();
       <>
           <Image
           className={styles.img}
-          src={placeholder}
+          src={thankyou}
           alt="Placeholder image"
         />
-        <h1 className={styles.header}>Completed task</h1>
+        <h1 className={styles.header}>Task completed!</h1>
         <div className={styles.paragraphBox}>
           <p className={styles.paragraph}>Information about how exactly this is impacting climate change.</p>
           <a className={styles.link} href="https://www.google.com/" target="_blank">Read more</a>
         </div>
-        <button className={styles.photoButton}>Add photo</button>
+        <p className={styles.shareText}>Share your accomplishment</p>
         <div className={styles.buttonContainer}>
         <FacebookShareButton
           url={'https://www.google.com/'}>
-          <FacebookIcon size={90} round />
+          <FacebookIcon size={50} round />
         </FacebookShareButton>
         <TwitterShareButton
           url={'https://www.google.com/'} >
-          <TwitterIcon size={90} round />
+          <TwitterIcon size={50} round />
         </TwitterShareButton>
         </div>
       </>

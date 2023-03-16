@@ -1,5 +1,8 @@
 .img {
     height: 50vh;
+    width: 390px;
+    display: block;
+    margin: 0 auto;
 }
 
 .header {
@@ -10,48 +13,39 @@
     line-height: 150%;
     letter-spacing: -0.022em;
     color: #0A1F28; 
-    margin: 30px 0 40px 0;
+    margin: 30px 0 30px 0;
 }
 
 .paragraphBox {
     border-radius: 10px;
     width: 320px;
     margin: auto;
-    padding: 20px 20px;
-    background: rgb(221, 255, 221);
+    padding: 15px 15px;
+    background-color: whitesmoke;
 }
 
 .paragraph {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .link {
     font-weight: bold;
     display: block;
     text-align: center;
+    font-size: 18px;
 }
 
-.photoButton {
-    width: 151px;
-    height: 60px;
+.shareText {
     font-family: 'Comfortaa';
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 150%;
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
-    letter-spacing: -0.022em;
-    color: #0A1F28;
-    border-radius: 10px;
-    background: rgb(97, 222, 97);
-    border: none;
-    width: 320px;
-    margin: auto;
-    margin-top: 30px;
-    display: block;
+    margin-top: 40px;
 }
 
 .buttonContainer {
     display: flex;
     justify-content: space-around;
-    margin: 45px 25px 30px 25px;
+    margin: 15px auto;
+    width: 150px;
 }
