@@ -7,13 +7,31 @@
     padding-right: 2em;
     padding-left: 2rem;
     padding-top: 2rem;
-  }
+}
 
 .img {
+    background-color: #79E79A;
+    object-fit: contain; // Or 'contain' if you want to keep the aspect ratio without cropping
     height: 50vh;
     width: 390px;
     display: block;
     margin: 0 auto;
+    // max-width: 100%;
+    // height: auto;
+    // border-radius: 5px;
+}
+
+.uploadedImage {
+    background-color: #79E79A;
+    object-fit: contain; // Or 'contain' if you want to keep the aspect ratio without cropping
+    height: 50vh;
+    width: 390px;
+    display: block;
+    margin: 0 auto;
+    padding:1%;
+    // max-width: 100%;
+    // height: auto;
+    // border-radius: 5px;
 }
 
 .header {
@@ -81,6 +99,7 @@
     background: #79E79A;
     border: 3px solid #3FBE8B;
     border-radius: 33px;
+    text-align: center;
 }
 
 .signOutBtn {
@@ -89,7 +108,7 @@
     left: 312px;
     top: 48px;
     background: #79E79A;
-    border:none;
+    border: none;
     border-radius: 6px;
     font-family: 'Comfortaa';
     font-style: normal;
@@ -99,7 +118,7 @@
     letter-spacing: -0.022em;
     color: #005668;
     margin: 1%;
-  }
+}
 
 // width: 200px;
 // height: 82px;

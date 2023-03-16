@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ['uacyvtcygmdnzwicfuvv.supabase.co'],
+  },
   reactStrictMode: true,
-}
-
-module.exports = nextConfig
-
-
-module.exports = {
   async redirects() {
     return [
       // {
@@ -14,6 +11,8 @@ module.exports = {
       //   destination: '/',
       //   permanent: true,
       // },
-    ]
+    ];
   },
-}
+};
+
+module.exports = nextConfig;
