@@ -51,7 +51,7 @@ const Tasks = ({ tasks }) => {
 
   };
 
-  const handleCompleteTask = async () => {
+  const handleCompleteTask = async (taskId) => {
     // Check if the user is logged in
     if (user) {
       try {
@@ -71,7 +71,9 @@ const Tasks = ({ tasks }) => {
           console.log('Task completed successfully:', data);
           setCompletedTasks([...completedTasks, currentTaskId]);
           handleClosePopup();
+          router.push(`/completed?taskId=${taskId}`);
         }
+        
       } catch (error) {
         console.error('Error completing task:', error);
       }
@@ -129,7 +131,7 @@ const Tasks = ({ tasks }) => {
             <p className={styles.text}>Something about sharing and mention of the photo option</p>
             <div className={styles.btnStyle}>
               <button className={styles.backBtn} onClick={handleClosePopup}>Back</button>
-              <button className={styles.completedBtn} onClick={handleCompleteTask}>Complete Task</button>
+              <button className={styles.completedBtn} onClick={() => handleCompleteTask(task.id)}>Complete Task</button>
             </div>
           </Popup>
         </div>

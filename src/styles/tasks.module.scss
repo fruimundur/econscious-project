@@ -1,12 +1,12 @@
 .container {
   display: flex;
   flex-direction: column;
+  padding-left: 2rem;
   padding-right: 2em;
-  padding-left: 1.5rem;
-  padding-top: 2rem;
 }
 
-.navBar {
+.navBar
+{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -40,7 +40,7 @@
 
   .logo {
     max-width: 50%;
-    height: 25px;
+    height: auto;
   }
 
 
@@ -52,13 +52,6 @@
   background: #79E79A;
   border:none;
   border-radius: 6px;
-  font-family: 'Comfortaa';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.022em;
-  color: #005668;
 }
 
 .title {
@@ -165,33 +158,11 @@
 }
 
 .taskBtn {
-  width: 335px;
-  height: 48px;
-  left: 38px;
-  top: 167px; 
-  background: #FFFFFF;
-  border: 3px solid #3FBE8B;
-  border-radius: 5px;
-  margin-top: 16px;
-  font-family: 'Comfortaa';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 150%;
-
-  text-align: center;
-  letter-spacing: -0.022em;
-
-  color: #005668;
-}
-
-.completedTask {
   width: 361px;
   height: 48px;
   left: 38px;
   top: 167px; 
   background: #FFFFFF;
-  background-color: #79E79A;
   border: 3px solid #3FBE8B;
   border-radius: 5px;
   margin-top: 16px;
