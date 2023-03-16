@@ -69,7 +69,7 @@ const Tasks = ({ tasks }) => {
       <h1 className={styles.header}>Pick a task</h1>
       {/* {console.log(tasks)} */}
       {tasks.map((task) => (
-        <div key={task.id}>
+        <div className={styles.taskcontainer} key={task.id}>
           <button className={styles.taskBtn} onClick={() => handleOpenPopup(task.id)}>{task.taskname}</button>
           <Popup isOpen={currentTaskId === task.id} onClose={handleClosePopup}>
             <h3 className={styles.title}>Why this makes a difference</h3>
@@ -80,7 +80,7 @@ const Tasks = ({ tasks }) => {
             <p className={styles.text}>Something about sharing and mention of the photo option</p>
             <div className={styles.btnStyle}>
               <button className={styles.backBtn} onClick={handleClosePopup}>Back</button>
-              <button className={styles.completedBtn} onClick={handleCompleteTask}>Completed Task</button>
+              <button className={styles.completedBtn} onClick={handleCompleteTask}>Complete Task</button>
             </div>
           </Popup>
         </div>
