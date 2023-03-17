@@ -140,11 +140,13 @@ export default function Completed({ task }) {
       <p className={styles.shareText}>Share your accomplishment</p>
       <div className={styles.buttonContainer}>
         <FacebookShareButton
-          url={'https://www.google.com/'}>
+          url={'https://econscious-project.vercel.app'}
+          title={'I took a step to combat climate change, and you can too!'}>
           <FacebookIcon size={50} round />
         </FacebookShareButton>
         <TwitterShareButton
-          url={'https://www.google.com/'} >
+          url={'https://econscious-project.vercel.app'}
+          title={'I took a step to combat climate change, and you can too!'} >
           <TwitterIcon size={50} round />
         </TwitterShareButton>
       </div>
