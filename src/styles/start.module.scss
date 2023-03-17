@@ -79,19 +79,23 @@ margin-top: 10px;
   border-radius: 33px;
 }
 
+
+
 .img {
-  position:fixed;
-  bottom:0px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 45vh;
-  width: auto;
-  z-index: -1;
-  
+  max-width: 300px;
+  max-height: 300px;
+  margin-top: 50px;
 }
 
-@media only screen and (min-width: 390px) {
+@media only screen and (min-width: 420px) {
   .img {
-    max-height: 350px;
+    position:fixed;
+    bottom:0px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 55vh;
+    width: auto;
+    z-index: -1;
+    
   }
 }
