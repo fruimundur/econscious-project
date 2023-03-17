@@ -20,6 +20,7 @@ export default function Start() {
       <Link className='start' href="/login">
         <button className={styles.startButton} type="start">Start</button>
       </Link>
+      <div className={styles.spacer}></div>
       <div className={styles.imgContainer}>
       <Image
           className={styles.img}
