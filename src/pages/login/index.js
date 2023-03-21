@@ -1,7 +1,5 @@
 import { Auth } from '@supabase/auth-ui-react'
-import { ThemeSupa } from '@supabase/auth-ui-shared'
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
-//import Account from '../components/Account'
 import Tasks from '../tasks/index'
 import { supabase } from '../../lib/supabaseClient';
 import styles from '../../styles/login.module.scss'
@@ -25,8 +23,24 @@ const Login = ({tasks}) => {
   return (
     <div className={styles.container}>
       {!session ? (
-        <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} theme="dark" />
-      ) : (
+        <Auth supabaseClient={supabase} 
+          appearance={{
+            style: {
+              container: { background: '#CBEFDF', margin: '20px', borderRadius: '15px' },
+              button: { background: '#79E79A', border: 'none', padding: '20p'},
+              anchor: { background: '#FFFFFF', marginLeft: '39px', marginRight: '39px', borderRadius: '15px',  padding: '8px', },
+              button: { background: '#79E79A', border: 'none', padding: '8px', borderRadius: '15px'},
+              divider:{ background: 'black'},
+              label:{ color: '#CBEFDF' },
+              input:{border: 'none', fontStyle: 'italic'},
+              loader:{ background: 'yellow'},
+              message: { background: 'green'},
+
+              // ..
+             },
+          }}
+    />
+  ) : (
         // <Tasks tasks={tasks} />
         <About/>
         //<Account session={session} />
