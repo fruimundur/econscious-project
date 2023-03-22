@@ -24,6 +24,8 @@ const Login = ({tasks}) => {
   return (
     <div>
       {!session ? (
+        <div>
+          <h1>Login</h1>
         <Auth 
           supabaseClient={supabase} 
           providers={false}
@@ -42,7 +44,8 @@ const Login = ({tasks}) => {
              },
              
           }}
-    />
+    />  
+    </div>
   ) : (
         // <Tasks tasks={tasks} />
         <About/>
