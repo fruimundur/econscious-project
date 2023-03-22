@@ -4,6 +4,7 @@ import Tasks from '../tasks/index'
 import { supabase } from '../../lib/supabaseClient';
 import styles from '../../styles/login.module.scss'
 import About from '../about';
+import Image from 'next/image';
 
 
 // export async function getServerSideProps() {
@@ -23,7 +24,9 @@ const Login = ({tasks}) => {
   return (
     <div>
       {!session ? (
-        <Auth supabaseClient={supabase} 
+        <Auth 
+          supabaseClient={supabase} 
+          providers={false}
           appearance={{
             style: {
               container: { background: '#daf7eb', marginLeft: '5%', marginRight: '5%', borderRadius: '15px', height: '429px' },
@@ -37,6 +40,7 @@ const Login = ({tasks}) => {
 
               // ..
              },
+             
           }}
     />
   ) : (
