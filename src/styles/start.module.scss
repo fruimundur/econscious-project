@@ -1,3 +1,18 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -7,54 +22,55 @@
   padding-left: 2rem;
   padding-right: 2rem;
   margin-top: 2rem;
+  min-height: calc(100vh - 55vh);
 }
 
 
 .logo {
-    max-width: 50%;
-    height: auto;
+  max-width: 50%;
+  height: auto;
 }
 
 // header
 .header {
-width: 323px;
-height: 88px;
-left: 35px;
-top: 161px;
+  width: 323px;
+  height: 88px;
+  left: 35px;
+  top: 161px;
 
-font-family: 'Comfortaa';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 130%;
-/* or 52px */
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  /* or 52px */
 
-letter-spacing: -0.022em;
+  letter-spacing: -0.022em;
 
-color: #005668;
+  color: #005668;
 
-margin-top: 90px;
+  margin-top: 90px;
 
 }
 
 //text below
 .slogan {
-width: 301px;
-height: 80px;
-left: 35px;
-top: 269px;
+  width: 301px;
+  height: 80px;
+  left: 35px;
+  top: 269px;
 
-font-family: 'Comfortaa';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 150%;
-/* or 30px */
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  /* or 30px */
 
-letter-spacing: -0.022em;
+  letter-spacing: -0.022em;
 
-color: #005668;
-margin-top: 10px;
+  color: #005668;
+  margin-top: 10px;
 }
 
 .startButton {
@@ -80,22 +96,50 @@ margin-top: 10px;
 }
 
 
+// @media only screen and (min-width: 400px) {
 
-.img {
-  max-width: 300px;
-  max-height: 300px;
-  margin-top: 50px;
+//   .img {
+//     position:fixed;
+//     bottom:0px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     height: 55vh;
+//     width: auto;
+//     z-index: -1;
+
+//   }
+// }
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
 }
 
-@media only screen and (min-width: 420px) {
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+
+.spacer {
+  flex-grow: 1;
+}
+
+
+.img {
+  height: 55vh;
+  max-width: 60vh;
+  width: auto;
+  z-index: -1;
+}
+
+
+@media only screen and (max-height: 800px) {
   .img {
-    position:fixed;
-    bottom:0px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 55vh;
-    width: auto;
-    z-index: -1;
-    
+    height: 45vh; // Decrease height for shorter screens
+    max-width: 50vh; // Decrease max-width for shorter screens
   }
 }

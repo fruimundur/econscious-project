@@ -29,13 +29,19 @@ const Tasks = ({ tasks }) => {
 
   const router = useRouter();
 
+
   const handleSignOut = async () => {
     await supabaseClient.auth.signOut();
     router.push('/');
   };
 
   const handleOpenPopup = (taskId) => {
-    setCurrentTaskId(taskId);
+    if (completedTasks.includes(taskId))
+    { 
+      router.push(`/completed?taskId=${taskId}`); 
+    } else {
+      setCurrentTaskId(taskId);
+    }
   };
 
   const handleClosePopup = () => {

@@ -8,8 +8,9 @@ import Image from 'next/image';
 
 export default function Start() {
   return (
-    <div>
-      <div className={styles.container}>
+    <div className={styles.pageWrapper}>
+      <div className={styles.contentWrapper}>
+        <div className={styles.container}>
       <Image
           className={styles.logo}
           src={logo}
@@ -20,15 +21,15 @@ export default function Start() {
       <Link className='start' href="/login">
         <button className={styles.startButton} type="start">Start</button>
       </Link>
+      </div>
+      </div>
       <div className={styles.imgContainer}>
-      <Image
+        <Image
           className={styles.img}
           src={tree}
           alt="Green tree"
         />
       </div>
-      </div>
     </div>
   );
 }
-//
