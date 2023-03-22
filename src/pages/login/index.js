@@ -6,35 +6,34 @@ import styles from '../../styles/login.module.scss'
 import About from '../about';
 
 
-export async function getServerSideProps() {
-  let { data } = await supabase.from('tasks').select()
+// export async function getServerSideProps() {
+//   let { data } = await supabase.from('tasks').select()
 
-  return {
-    props: {
-      tasks: data
-    },
-  }
-}
+//   return {
+//     props: {
+//       tasks: data
+//     },
+//   }
+// }
 
 const Login = ({tasks}) => {
   const session = useSession()
   const supabase = useSupabaseClient()
 
   return (
-    <div className={styles.container}>
+    <div>
       {!session ? (
         <Auth supabaseClient={supabase} 
           appearance={{
             style: {
-              container: { background: '#CBEFDF', margin: '20px', borderRadius: '15px' },
-              button: { background: '#79E79A', border: 'none', padding: '20p'},
-              anchor: { background: '#FFFFFF', marginLeft: '39px', marginRight: '39px', borderRadius: '15px',  padding: '8px', },
-              button: { background: '#79E79A', border: 'none', padding: '8px', borderRadius: '15px'},
+              container: { background: '#daf7eb', marginLeft: '5%', marginRight: '5%', borderRadius: '15px', height: '429px' },
+              anchor: { textDecoration: 'none', background: '#FFFFFF', marginLeft: '5%', marginRight: '5%', borderRadius: '15px',  padding: '8px', width: '250px', fontFamily: 'Comfortaa', fontSize: '12px' },
+              button: { background: '#79E79A', border: 'none', padding: '8px', borderRadius: '15px',  width: '260px', marginLeft: '10%', marginRight: '5%', fontFamily: 'Comfortaa' },
               divider:{ background: 'black'},
-              label:{ color: '#CBEFDF' },
-              input:{border: 'none', fontStyle: 'italic'},
-              loader:{ background: 'yellow'},
-              message: { background: 'green'},
+              label:{ color: '#daf7eb', fontFamily: 'Comfortaa' },
+              input:{border: 'none', borderBottom: 'solid', borderBottomColor: '#005668', borderBottomWidth: '2px', paddingBottom: '10px', fontFamily: 'Comfortaa' },
+              loader:{ background: '#005668'},
+              message: { color: '#005668', fontFamily: 'Comfortaa'},
 
               // ..
              },
