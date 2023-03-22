@@ -28,7 +28,7 @@ const Login = ({tasks}) => {
             style: {
               container: { background: '#daf7eb', marginLeft: '5%', marginRight: '5%', borderRadius: '15px', height: '429px' },
               anchor: { textDecoration: 'none', background: '#FFFFFF', marginLeft: '5%', marginRight: '5%', borderRadius: '15px',  padding: '8px', width: '250px', fontFamily: 'Comfortaa', fontSize: '12px' },
-              button: { background: '#79E79A', border: 'none', padding: '8px', borderRadius: '15px',  width: '260px', marginLeft: '10%', marginRight: '5%', fontFamily: 'Comfortaa' },
+              button: { background: '#79E79A', border: 'none', padding: '8px', borderRadius: '15px',  width: '260px', marginLeft: '10%', alignContent: 'center', fontFamily: 'Comfortaa' },
               divider:{ background: 'black'},
               label:{ color: '#daf7eb', fontFamily: 'Comfortaa' },
               input:{border: 'none', borderBottom: 'solid', borderBottomColor: '#005668', borderBottomWidth: '2px', paddingBottom: '10px', fontFamily: 'Comfortaa' },
