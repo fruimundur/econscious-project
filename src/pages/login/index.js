@@ -6,7 +6,7 @@ import Tasks from '../tasks/index'
 import { supabase } from '../../lib/supabaseClient';
 import styles from '../../styles/login.module.scss'
 import About from '../about';
-
+import Header from '../components/Header';
 
 export async function getServerSideProps() {
   let { data } = await supabase.from('tasks').select()
@@ -24,6 +24,7 @@ const Login = ({tasks}) => {
 
   return (
     <div className={styles.container}>
+    <Header />
       {!session ? (
         <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} theme="dark" />
       ) : (
