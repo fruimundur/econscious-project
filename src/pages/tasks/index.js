@@ -111,23 +111,23 @@ const Tasks = ({ tasks }) => {
 
   return (
     <div className={styles.container}>
-     <div className={styles.navBar}>
-    <Link href="/">
-    <Image
-        className={styles.logo}
-        src={logo}
-        alt="Brand logo"
-      />
-    </Link>
-  <button className={styles.signOutBtn} onClick={handleSignOut}>
-    Sign Out
-  </button>
-</div>
-      <h1 className={styles.header}>Pick a task</h1>
+      <div className={styles.navBar}>
+        <Image
+          className={styles.logo}
+          src={logo}
+          alt="Brand logo"
+        />
+         <button className={styles.signOutBtn} onClick={handleSignOut}>
+          Sign Out
+        </button>
+      </div>
+      <div className={styles.headerContainer}>
+        <h1 className={styles.header}>Pick a task</h1>
+      </div>
       {/* {console.log(tasks)} */}
       {tasks.map((task) => (
         <div className={styles.taskcontainer} key={task.id}>
-          <button className={`${styles.taskBtn} ${completedTasks.includes(task.id) ? styles.completedTask : ''}`}onClick={() => handleOpenPopup(task.id)}>{task.taskname}</button>
+          <button className={`${styles.taskBtn} ${completedTasks.includes(task.id) ? styles.completedTask : ''}`}onClick={() => handleOpenPopup(task.id)}><img src={task.icon} />{task.taskname}</button>
           <Popup isOpen={currentTaskId === task.id} onClose={handleClosePopup}>
             <h1 className={styles.name}>{task.taskname}</h1>
             <h2 className={styles.type}>{task.type}</h2>

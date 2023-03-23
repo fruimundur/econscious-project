@@ -133,7 +133,7 @@ export default function Completed({ task }) {
       <h1 className={styles.header}>Task completed!</h1>
       <div className={styles.paragraphBox}>
         <p className={styles.paragraph}>{task.description}</p>
-        <a className={styles.link} href="https://www.google.com/" target="_blank">Read more</a>
+        <a className={styles.link} href={task.link} target="_blank">Read more</a>
       </div>
       <div {...getRootProps()} className={styles.photoButton}>
         <input {...getInputProps()} capture="environment" />

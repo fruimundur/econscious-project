@@ -1,12 +1,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  justify-content: center;
   padding-right: 2em;
   padding-left: 2rem;
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 
 .navBar {
@@ -151,17 +149,17 @@
   color: #005668;
 }
 
-.header {
-  width: 238px;
-  height: 60px;
-  left: 36px;
-  top: 92px;
+.headerContainer {
+  width: 100%;
+}
+
+.header {  
+  margin-bottom: 0px;
   font-family: 'Comfortaa';
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 25px;
   line-height: 150%;
-  text-align: center;
   letter-spacing: -0.022em;
   color: #005668;
 }
@@ -172,19 +170,22 @@
   left: 38px;
   top: 167px; 
   background: #FFFFFF;
-  border: 3px solid #3FBE8B;
-  border-radius: 5px;
+  border: none;
   margin-top: 16px;
-  font-family: 'Comfortaa';
+  font-family: 'Oxygen';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 18px;
   line-height: 150%;
-
-  text-align: center;
   letter-spacing: -0.022em;
-
-  color: #005668;
+  color: #005668; 
+  background: #E5F7EF;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+  padding-left: 30px;
 }
 
 .completedTask {
@@ -193,17 +194,17 @@
   left: 38px;
   top: 167px; 
   background: #FFFFFF;
-  border: 3px solid #3FBE8B;
-  border-radius: 5px;
+  border: none;
   margin-top: 16px;
-  font-family: 'Comfortaa';
+  font-family: 'Oxygen';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 18px;
   line-height: 150%;
-  text-align: center;
   letter-spacing: -0.022em;
   color: #005668;
+  background: #79E79A;
+  border-radius: 15px;
   background-color: #79E79A;
 
 }
