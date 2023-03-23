@@ -111,16 +111,18 @@ const Tasks = ({ tasks }) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.navBar}>
-        <Image
-          className={styles.logo}
-          src={logo}
-          alt="Brand logo"
-        />
-        <button className={styles.signOutBtn} onClick={handleSignOut}>
-          Sign Out
-        </button>
-      </div>
+     <div className={styles.navBar}>
+    <Link href="/">
+    <Image
+        className={styles.logo}
+        src={logo}
+        alt="Brand logo"
+      />
+    </Link>
+  <button className={styles.signOutBtn} onClick={handleSignOut}>
+    Sign Out
+  </button>
+</div>
       <h1 className={styles.header}>Pick a task</h1>
       {/* {console.log(tasks)} */}
       {tasks.map((task) => (

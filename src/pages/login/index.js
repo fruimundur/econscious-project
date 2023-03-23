@@ -1,12 +1,12 @@
 import { Auth } from '@supabase/auth-ui-react'
 import { ThemeSupa } from '@supabase/auth-ui-shared'
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
-//import Account from '../components/Account'
 import Tasks from '../tasks/index'
 import { supabase } from '../../lib/supabaseClient';
 import styles from '../../styles/login.module.scss'
 import About from '../about';
 import Header from '../components/Header';
+import logo from '../../../public/logo.png';
 
 export async function getServerSideProps() {
   let { data } = await supabase.from('tasks').select()
@@ -24,7 +24,7 @@ const Login = ({tasks}) => {
 
   return (
     <div className={styles.container}>
-    <Header />
+      <Header logo={<img src={logo} alt="Logo" />} />
       {!session ? (
         <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} theme="dark" />
       ) : (
@@ -37,6 +37,7 @@ const Login = ({tasks}) => {
 }
 
 export default Login
+
 
 /*
 import { useRouter } from 'next/router';
