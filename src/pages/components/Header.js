@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './logo'
+import styles from '../../styles/header.module.scss'
 
 const Header = () => {
   return (
@@ -11,6 +12,3 @@ const Header = () => {
 }
 
 export default Header;
-
-
-

@@ -1,16 +1,13 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    justify-content: center;
     padding-right: 2em;
     padding-left: 2rem;
     padding-top: 2rem;
 }
 
 .img {
-    background-color: #79E79A;
     object-fit: contain; // Or 'contain' if you want to keep the aspect ratio without cropping
     height: 50vh;
     width: 390px;
@@ -22,7 +19,6 @@
 }
 
 .uploadedImage {
-    background-color: #79E79A;
     object-fit: contain; // Or 'contain' if you want to keep the aspect ratio without cropping
     height: 50vh;
     width: 390px;

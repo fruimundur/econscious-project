@@ -121,7 +121,7 @@ export default function Completed({ task }) {
 
   return (
     <>
-    <Header />
+    <Header/>
       {/*<button className={styles.signOutBtn} onClick={handleBack}>
         Back
       </button>*/}

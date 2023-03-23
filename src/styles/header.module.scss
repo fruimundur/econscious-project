@@ -1,22 +1,32 @@
 /* Logo */
 
-.logo {
-  position: absolute;
-  width: 173px;
-  height: 48px;
-  left: 40px;
-  top: 59px;
+// .logo {
+//   position: absolute;
+//   width: 173px;
+//   height: 48px;
+//   left: 40px;
+//   top: 59px;
 
-  font-family: 'Comfortaa';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 150%;
-  /* identical to box height, or 48px */
+//   font-family: 'Comfortaa';
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 32px;
+//   line-height: 150%;
+//   /* identical to box height, or 48px */
 
-  letter-spacing: 0.04em;
+//   letter-spacing: 0.04em;
 
-  color: #79E79A;
+//   color: #79E79A;
+// }
+
+.pic {
+  width: 165px;
+  height: 30px;
+  object-fit: contain; // Or 'contain' if you want to keep the aspect ratio without cropping
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+
 }
 
 
