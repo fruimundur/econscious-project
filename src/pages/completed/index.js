@@ -121,37 +121,40 @@ export default function Completed({ task }) {
 
   return (
     <>
-    <Header/>
-      {/*<button className={styles.signOutBtn} onClick={handleBack}>
-        Back
-      </button>*/}
-      {uploadedImageUrl ? (
-        <Image className={styles.uploadedImage} src={uploadedImageUrl} alt="Uploaded image" width={600} height={400} />
-      ) : (
-        <Image className={styles.img} src={thankyou} alt="Placeholder image" width={600} height={400} />
-      )}
-      <h1 className={styles.header}>Task completed!</h1>
-      <div className={styles.paragraphBox}>
-        <p className={styles.paragraph}>{task.description}</p>
-        <a className={styles.link} href={task.link} target="_blank">Read more</a>
-      </div>
-      <div {...getRootProps()} className={styles.photoButton}>
-        <input {...getInputProps()} capture="environment" />
-        {<p>Add photo</p>}
-      </div>
-      <p className={styles.shareText}>Share your accomplishment</p>
-      <div className={styles.buttonContainer}>
-        <FacebookShareButton
-          url={'https://econscious-project.vercel.app'}
-          title={'I took a step to combat climate change, and you can too!'}>
-          <FacebookIcon size={50} round />
-        </FacebookShareButton>
-        <TwitterShareButton
-          url={'https://econscious-project.vercel.app'}
-          title={'I took a step to combat climate change, and you can too!'} >
-          <TwitterIcon size={50} round />
-        </TwitterShareButton>
-      </div>
+    <div className={styles.container}>
+      <Header/>
+        {/*<button className={styles.signOutBtn} onClick={handleBack}>
+          Back
+        </button>*/}
+        <h1 className={styles.header} >Thank you!</h1>
+        {uploadedImageUrl ? (
+          <Image className={styles.uploadedImage} src={uploadedImageUrl} alt="Uploaded image" width={600} height={400} />
+        ) : (
+          <Image className={styles.img} src={thankyou} alt="Placeholder image" width={600} height={400} />
+        )}
+        <h1 className={styles.header}>Completed</h1>
+        <div className={styles.paragraphBox}>
+          <p className={styles.paragraph}>{task.description}</p>
+          <a className={styles.link} href={task.link} target="_blank">Read more</a>
+        </div>
+        <div {...getRootProps()} className={styles.photoButton}>
+          <input {...getInputProps()} capture="environment" />
+          {<p>Add photo</p>}
+        </div>
+        <p className={styles.shareText}>Share your accomplishment</p>
+        <div className={styles.buttonContainer}>
+          <FacebookShareButton
+            url={'https://econscious-project.vercel.app'}
+            title={'I took a step to combat climate change, and you can too!'}>
+            <FacebookIcon size={50} round />
+          </FacebookShareButton>
+          <TwitterShareButton
+            url={'https://econscious-project.vercel.app'}
+            title={'I took a step to combat climate change, and you can too!'} >
+            <TwitterIcon size={50} round />
+          </TwitterShareButton>
+        </div>
+      </div>  
     </>
   );
 }
