@@ -1,3 +1,37 @@
-.auth {
+.mainContainer {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    padding-top: 180px;
+}
+
+.container{
+    max-width: 334px;
+    max-height: 427px;
+    background-color: #daf7eb;
+    padding-top: 20px;
+    padding-left: 10%;
+    padding-bottom: 20px;
+    padding-right: 10%;
+    border-radius: 20px;
+    
+}
+
+.header {
+    width: 116.95px;
+    left: 71.98px;
+    top: 255px;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 150%;
+    letter-spacing: -0.022em;
+    color: #005668;
+}
+
+.steps {
+    width: 86px;
+    height: 116px;
+    margin-top: 40px;
 }

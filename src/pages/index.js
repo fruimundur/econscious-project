@@ -11,11 +11,11 @@ export default function Start() {
     <div className={styles.pageWrapper}>
       <div className={styles.contentWrapper}>
         <div className={styles.container}>
-      <Image
+        <Image
           className={styles.logo}
           src={logo}
           alt="Brand logo"
-        />
+        /> 
       <h1 className={styles.header}> Save the planet step-by-step </h1>
       <p className={styles.slogan}>Take small concrete steps to help combat climate change!</p>
       <Link className='start' href="/login">

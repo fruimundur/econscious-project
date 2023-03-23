@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Poppins:wght@200;500;900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Oxygen:wght@200;400;500;700;900&display=swap" rel="stylesheet" />
       </Head>
       <body>
         <Main />
