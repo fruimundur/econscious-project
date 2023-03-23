@@ -7,6 +7,7 @@ import { supabase } from '../../lib/supabaseClient';
 import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
 import logo from '../../../public/logo.png';
 import Image from 'next/image';
+import DropdownBasic from '../components/Menu.js';
 
 
 export async function getServerSideProps() {
@@ -117,9 +118,7 @@ const Tasks = ({ tasks }) => {
           src={logo}
           alt="Brand logo"
         />
-        <button className={styles.signOutBtn} onClick={handleSignOut}>
-          Sign Out
-        </button>
+        <DropdownBasic></DropdownBasic>
       </div>
       <h1 className={styles.header}>Pick a task</h1>
       {/* {console.log(tasks)} */}
