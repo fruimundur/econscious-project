@@ -10,13 +10,13 @@ export default function About() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.headerContainer}>
+      {/* <div className={styles.headerContainer}>
       <Image
               className={styles.logo}
               src={logo}
               alt="Brand logo"
             />  
-      </div>           
+      </div>            */}
         <Image
               className={styles.infoPhoto}
               src={infopage}
