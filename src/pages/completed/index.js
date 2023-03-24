@@ -121,12 +121,12 @@ export default function Completed({ task }) {
 
   return (
     <>
-    <div className={styles.container}>
       <Header/>
         {/*<button className={styles.signOutBtn} onClick={handleBack}>
           Back
         </button>*/}
-        <h1 className={styles.header} >Thank you!</h1>
+      <div className={styles.container}>
+        <h1 className={styles.thankyou} >Thank you!</h1>
         {uploadedImageUrl ? (
           <Image className={styles.uploadedImage} src={uploadedImageUrl} alt="Uploaded image" width={600} height={400} />
         ) : (

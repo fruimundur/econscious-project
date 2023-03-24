@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 4rem;
+  padding-top: 1rem;
 }
 
 .navBar {
   display: flex;
   flex-direction: row;
+  gap: 100px;
 }
 
 .popup {
@@ -113,8 +114,8 @@
 }
 
 .btnStyle{
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .completedBtn {
@@ -128,25 +129,26 @@
   font-family: 'Comfortaa';
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.022em;
   color: #005668;
 }
 
 .backBtn {
-  width: 100px;
-  height: 50px;
-  background: #79E79A;
-  border:none;
-  border-radius: 10px;
+  width: 94px;
+  height: 44px;
   font-family: 'Comfortaa';
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.022em;
   color: #005668;
+
+  background: #FFFFFF;
+  border: 2px solid #79E79A;
+  border-radius: 20px;
 }
 
 .headerContainer {

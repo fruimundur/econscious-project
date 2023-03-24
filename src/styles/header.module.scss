@@ -24,12 +24,7 @@
   height: 30px;
   object-fit: contain; // Or 'contain' if you want to keep the aspect ratio without cropping
   display: flex;
-  justify-content: flex-start;
-}
-
-.headerContainer {
-  width: 300px;
-  float: left;
+  padding: 20px;
 }
 
 
