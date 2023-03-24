@@ -8,6 +8,7 @@ import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
 import logo from '../../../public/logo.png';
 import Image from 'next/image';
 import DropdownBasic from '../components/Menu.js';
+import Header from '../components/Header';
 
 
 export async function getServerSideProps() {
@@ -113,11 +114,7 @@ const Tasks = ({ tasks }) => {
   return (
     <div className={styles.container}>
       <div className={styles.navBar}>
-        <Image
-          className={styles.logo}
-          src={logo}
-          alt="Brand logo"
-        />
+        <Header logo={<img src={logo} alt="Logo" />} />
         <DropdownBasic></DropdownBasic>
       </div>
       <div className={styles.headerContainer}>

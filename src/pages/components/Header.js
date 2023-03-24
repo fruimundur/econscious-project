@@ -4,10 +4,12 @@ import styles from '../../styles/header.module.scss'
 
 const Header = () => {
   return (
-    <header>
-      <Logo />
-      {/* Other header content goes here */}
-    </header>
+    <div className={styles.headerContainer}> 
+      <header>
+        <Logo />
+        {/* Other header content goes here */}
+      </header>
+    </div> 
   );
 }
 

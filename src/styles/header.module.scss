@@ -23,10 +23,8 @@
   width: 165px;
   height: 30px;
   object-fit: contain; // Or 'contain' if you want to keep the aspect ratio without cropping
-  margin: 0 auto;
   display: flex;
-  justify-content: flex-start;
-
+  padding: 20px;
 }
 
 

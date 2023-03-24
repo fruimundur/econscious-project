@@ -2,15 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 2em;
-  padding-left: 2rem;
-  padding-top: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .navBar {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 100px;
 }
 
 .popup {
@@ -37,12 +36,12 @@
   padding-left: 2rem;
   padding-right: 2rem;
   overflow: scroll;
-}
+} 
 
-  .logo {
-    max-width: 50%;
-    height: 25px;
-  }
+.logo {
+  max-width: 50%;
+  height: 25px;
+}
 
 
 .signOutBtn {
@@ -116,41 +115,45 @@
 }
 
 .btnStyle{
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .completedBtn {
-  height: 50px;
+  width: 150px;
+  height: 44px;
+  left: 185px;
+  top: 684px;
   background: #79E79A;
+  border-radius: 20px;
   border: none;
-  border-radius: 10px;
   font-family: 'Comfortaa';
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.022em;
   color: #005668;
 }
 
 .backBtn {
-  width: 100px;
-  height: 50px;
-  background: #79E79A;
-  border:none;
-  border-radius: 10px;
+  width: 94px;
+  height: 44px;
   font-family: 'Comfortaa';
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.022em;
   color: #005668;
+  background: #FFFFFF;
+  border: 2px solid #79E79A;
+  border-radius: 20px;
 }
 
 .headerContainer {
-  width: 100%;
+  width: 324px;
+  float: left;
 }
 
 .header {  
